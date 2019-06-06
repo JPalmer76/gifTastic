@@ -26,7 +26,7 @@ $(document).ready(function() {
     a.addClass("gifs");
     a.attr("data-name", input);
     a.text(input);
-    $(a).hide(1000).show(2000);
+    $(a).hide(500).show(1000);
     $("#buttons-view").append(a);
     $("#gif-input").val("");
     
