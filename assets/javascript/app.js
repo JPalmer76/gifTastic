@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Initial array of Gifs
-  var topics = ["honey boo boo"];
+  var topics = ["honey boo boo", "grumpy cat", "dumb and dumber"];
   renderButtons();
 
   // render buttons function
@@ -56,6 +56,7 @@ $(document).ready(function() {
       for(let i = 0; i < response.data.length; i++) {
        console.log(i);
         var gifDiv = $("<div>");
+        gifDiv.attr("class", "gifWrapper");
         var p = $("<p>").text("Rating: " + results[i].rating);
         var gifImage = $("<img>");
         gifImage.attr("src", results[i].images.fixed_height_still.url);

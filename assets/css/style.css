@@ -1,17 +1,31 @@
+html {
+   margin: 0px;
+   padding: 0px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #15120b;
+}
+
 body {
-    background-color: gray;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
 }
 
 
 #gif-form {
     float: right;
-    margin-right: 40px;
+    margin-right: 110px;
+    margin-top: 80px;
 }
 
 #buttons-view {
     text-align: center;
     
 }
+
+
 
 #marker {
     background-color: limegreen;
@@ -24,4 +38,12 @@ body {
 
 #gifs-appear-here {
     margin-left: 50px;
+}
+
+.gifWrapper {
+    display: inline-block;
+    background-color: #9bc19c;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
 }
