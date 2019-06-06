@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Initial array of Gifs
-  var topics = ["honey boo boo", "grumpy cat", "dumb and dumber"];
+  var topics = ["honey boo boo"];
   renderButtons();
 
   // render buttons function
@@ -8,7 +8,7 @@ $(document).ready(function() {
     $("#buttons-view").empty();
     for (var i = 0; i < topics.length; i++) {
       var a = $("<button>");
-    a.addClass("gifs btn btn-success");
+    a.addClass("gifs");
     a.attr("data-name", topics[i]);
     a.text(topics[i]);
     $("#buttons-view").append(a);
@@ -23,7 +23,7 @@ $(document).ready(function() {
     var input = $("#gif-input").val().trim();
     console.log(input);
     var a = $("<button>");
-    a.addClass("gifs btn btn-success");
+    a.addClass("gifs");
     a.attr("data-name", input);
     a.text(input);
     $("#buttons-view").append(a);
@@ -57,14 +57,13 @@ $(document).ready(function() {
         var gifDiv = $("<div>");
         var p = $("<p>").text("Rating: " + results[i].rating);
         var gifImage = $("<img>");
-        gifImage.attr("src", results[i].images.fixed_height_small_still.url);
-        gifImage.attr("data-still", results[i].images.fixed_height_small_still.url);
-        gifImage.attr("data-animate", results[i].images.fixed_height_small.url);
+        gifImage.attr("src", results[i].images.fixed_height_still.url);
+        gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+        gifImage.attr("data-animate", results[i].images.fixed_height.url);
         gifImage.attr("state", "still");
         gifImage.addClass("gify");
         gifDiv.append(p);
         gifDiv.append(gifImage);
-        
         $("#gifs-appear-here").prepend(gifDiv);
       }
       }) 
@@ -73,11 +72,8 @@ $(document).ready(function() {
   });
 
   $(document).on("click", ".gify", function() {
-
-   
     var state = $(this).attr("state");
     console.log(state)
-    
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("state", "animate");

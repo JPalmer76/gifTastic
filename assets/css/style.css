@@ -1,2 +1,27 @@
+body {
+    background-color: gray;
+}
 
+
+#gif-form {
+    float: right;
+    margin-right: 40px;
+}
+
+#buttons-view {
+    text-align: center;
     
+}
+
+#marker {
+    background-color: limegreen;
+}
+    
+.gifs {
+    background-color: crimson;
+    color: white;
+}
+
+#gifs-appear-here {
+    margin-left: 50px;
+}
